@@ -35,7 +35,8 @@ namespace ProgramemesCards
         void Start()
         {
             instance = this;
-            CustomCard.BuildCard<MyCardName>();
+            CustomCard.BuildCard<EvasiveManeuvers>();
+            CustomCard.BuildCard<Garneau>();
         }
     }
 }

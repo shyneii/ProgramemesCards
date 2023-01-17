@@ -13,7 +13,7 @@ namespace ProgramemesCards.Cards
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            block.forceToAdd = -1f;
+            block.forceToAdd = -10f;
             statModifiers.health = 1.2f;
             block.cdAdd = 0.25f;
             UnityEngine.Debug.Log($"[{ProgramemesCards.ModInitials}][Card] {GetTitle()} has been setup.");
@@ -33,7 +33,7 @@ namespace ProgramemesCards.Cards
         }
         protected override string GetDescription()
         {
-            return "Jump backwards when you block.";
+            return "Jump backwards when you block. Let's goooo";
         }
         protected override GameObject GetCardArt()
         {
