@@ -16,12 +16,14 @@ namespace ProgramemesCards
     [BepInPlugin(ModId, ModName, Version)]
     // The game our mod is associated with
     [BepInProcess("Rounds.exe")]
-    public class MyModName : BaseUnityPlugin
+    public class ProgramemesCards : BaseUnityPlugin
     {
-        private const string ModId = "com.My.Mod.Id";
-        private const string ModName = "MyModName";
-        public const string Version = "0.0.0"; // What version are we on (major.minor.patch)?
+        private const string ModId = "com.shynei.rounds.ProgramemesCards";
+        private const string ModName = "Programemes Cards";
+        public const string Version = "1.0.0"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "PC";
+
+        public static ProgramemesCards instance { get; private set; }
 
 
         void Awake()
@@ -32,11 +34,9 @@ namespace ProgramemesCards
         }
         void Start()
         {
+            instance = this;
             CustomCard.BuildCard<MyCardName>();
         }
-        public static ProgramemesCards instance { get; private set; }
-
-        
     }
 }
 
